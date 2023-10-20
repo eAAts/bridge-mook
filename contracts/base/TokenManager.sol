@@ -2,21 +2,55 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract TokenManager is Ownable {
-    mapping(address => bool) public approvedTokens;
-
-    event TokenApproved(address indexed token);
-    event TokenRevoked(address indexed token);
-
-    function approveToken(address token) external onlyOwner {
-        approvedTokens[token] = true;
-        emit TokenApproved(token);
+    struct TokenPair {
+        address targetToken;
+        bool isGeneratedToken;
     }
 
-    function revokeToken(address token) external onlyOwner {
-        approvedTokens[token] = false;
-        emit TokenRevoked(token);
+    mapping(address => TokenPair) public approvedTokens;
+
+    event TokenApproved(
+        address indexed sourceToken,
+        address indexed targetToken,
+        bool indexed isGeneratedToken
+    );
+    event TokenRevoked(
+        address indexed sourceToken,
+        address indexed targetToken
+    );
+
+    function approveToken(
+        address _sourceToken,
+        address _targetToken,
+        bool _isGeneratedToken
+    ) external onlyOwner {
+        approvedTokens[_sourceToken] = TokenPair({
+            targetToken: _targetToken,
+            isGeneratedToken: _isGeneratedToken
+        });
+
+        emit TokenApproved(_sourceToken, _targetToken, _isGeneratedToken);
+    }
+
+    function revokeToken(address _sourceToken) external onlyOwner {
+        delete approvedTokens[_sourceToken];
+        emit TokenRevoked(
+            _sourceToken,
+            approvedTokens[_sourceToken].targetToken
+        );
+    }
+
+    function getTargetToken(
+        address _sourceToken
+    ) external view returns (address) {
+        return approvedTokens[_sourceToken].targetToken;
+    }
+
+    function isGeneratedToken(
+        address _sourceToken
+    ) external view returns (bool) {
+        return approvedTokens[_sourceToken].isGeneratedToken;
     }
 }
