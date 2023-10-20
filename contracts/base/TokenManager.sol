@@ -44,13 +44,13 @@ contract TokenManager is Ownable {
 
     function getTargetToken(
         address _sourceToken
-    ) external view returns (address) {
+    ) public view returns (address) {
         return approvedTokens[_sourceToken].targetToken;
     }
 
     function isGeneratedToken(
         address _sourceToken
-    ) external view returns (bool) {
+    ) public view returns (bool) {
         return approvedTokens[_sourceToken].isGeneratedToken;
     }
 }
