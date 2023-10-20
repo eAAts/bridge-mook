@@ -25,6 +25,10 @@ module.exports = {
       url: "https://polygon-mumbai.infura.io/v3/b2772de7df134490afb47e1f8dd18ea2",
       accounts: [PRIVATE_KEY, ],
     },
+    mnt: {
+      url: "https://rpc.testnet.mantle.xyz",
+      accounts: [PRIVATE_KEY, ],
+    },
   },
   etherscan: {
     // apiKey: process.env.POLYGONSCAN_API_KEY,
