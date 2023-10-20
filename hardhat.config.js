@@ -29,6 +29,14 @@ module.exports = {
       url: "https://rpc.testnet.mantle.xyz",
       accounts: [PRIVATE_KEY, ],
     },
+    scroll: {
+      url: "https://scroll-sepolia.blockpi.network/v1/rpc/public",
+      accounts: [PRIVATE_KEY, ],
+    },
+    file: {
+      url: "https://api.calibration.node.glif.io/rpc/v1",
+      accounts: [PRIVATE_KEY, ],
+    },
   },
   etherscan: {
     // apiKey: process.env.POLYGONSCAN_API_KEY,
