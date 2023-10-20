@@ -25,7 +25,7 @@ describe("BridgeMookup", function () {
     await targetBridgeMookup.deployed();
 
     const BridgeToken = await ethers.getContractFactory("BridgeToken");
-    bridgeToken = await BridgeToken.deploy("BridgeToken", "BTK", targetBridgeMookup.address);
+    bridgeToken = await BridgeToken.deploy("BridgeToken", "BTK", 18, targetBridgeMookup.address);
     await bridgeToken.deployed();
   });
 

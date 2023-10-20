@@ -13,9 +13,9 @@ async function deployBridgeMookup() {
     console.log("BridgeMookup address:", bridgeMookup.address);
 }
 
-async function deployBridgeToken(name, symbol) {
+async function deployBridgeToken(name, symbol, decimals) {
     const BridgeToken = await ethers.getContractFactory("BridgeToken");
-    const bridgeToken = await BridgeToken.deploy(name, symbol, bridgeMookupAddress);
+    const bridgeToken = await BridgeToken.deploy(name, symbol, decimals, bridgeMookupAddress);
 
     console.log(`${symbol} address: ${bridgeToken.address}`);
 }
@@ -25,8 +25,8 @@ async function main() {
     console.log("Deploying contracts with the account:", deployer.address);
 
     await deployBridgeMookup();
-    await deployBridgeToken("eAAts USDC", "eUSDC");
-    await deployBridgeToken("eAAts Ether", "eETH");
+    await deployBridgeToken("eAAts USDC", "eUSDC", 6);
+    await deployBridgeToken("eAAts Ether", "eETH", 18);
 }
 
 main()

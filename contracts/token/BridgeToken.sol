@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract BridgeToken is ERC20, Ownable {
+    uint8 private decimals_;
     address public bridge;
 
     event Mint(address indexed to, uint256 amount);
@@ -13,9 +14,12 @@ contract BridgeToken is ERC20, Ownable {
     constructor(
         string memory _name,
         string memory _symbol,
+        uint8 _decimals,
         address _bridge
     ) ERC20(_name, _symbol) {
         bridge = _bridge;
+     
+        decimals_ = _decimals;
     }
 
     function mint(address _to, uint256 _amount) external onlyBridge {
@@ -30,6 +34,10 @@ contract BridgeToken is ERC20, Ownable {
 
     function setBridge(address _bridge) external onlyOwner {
         bridge = _bridge;
+    }
+
+    function decimals() public view override returns (uint8) {
+        return decimals_;
     }
 
     modifier onlyBridge() {

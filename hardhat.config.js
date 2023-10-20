@@ -18,11 +18,11 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://polygon-mumbai.infura.io/v3/b2772de7df134490afb47e1f8dd18ea2",
+        url: "https://polygon-mumbai.infura.io/v3/" + process.env.INFURA_KEY,
       },
     },
     mumbai: {
-      url: "https://polygon-mumbai.infura.io/v3/b2772de7df134490afb47e1f8dd18ea2",
+      url: "https://polygon-mumbai.infura.io/v3/" + process.env.INFURA_KEY,
       accounts: [PRIVATE_KEY, ],
     },
     mnt: {
