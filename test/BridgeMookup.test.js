@@ -13,7 +13,7 @@ describe("BridgeMookup", function () {
     [owner, user1, user2, user3, recipient] = await ethers.getSigners();
 
     const TestToken = await ethers.getContractFactory("TestToken");
-    testToken = await TestToken.deploy("TestToken", "TTK");
+    testToken = await TestToken.deploy("TestToken", "TTK", 18);
     await testToken.deployed();
 
     const SourceBridgeMookup = await ethers.getContractFactory("BridgeMookup");
