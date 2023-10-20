@@ -4,8 +4,6 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract TestToken is ERC20 {
-    address public bridge;
-
     constructor(
         string memory _name,
         string memory _symbol
