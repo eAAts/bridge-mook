@@ -1,4 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
+
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -20,6 +23,7 @@ module.exports = {
     },
     mumbai: {
       url: "https://polygon-mumbai.infura.io/v3/b2772de7df134490afb47e1f8dd18ea2",
+      accounts: [PRIVATE_KEY, ],
     },
   },
   etherscan: {
