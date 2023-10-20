@@ -12,6 +12,8 @@ contract TestToken is ERC20 {
         uint8 _decimals
     ) ERC20(_name, _symbol) {
         decimals_ = _decimals;
+
+        _mint(msg.sender, 1000000 * (10 ** decimals_));
     }
 
     function mint(address _to, uint256 _amount) external {
