@@ -63,9 +63,9 @@ async function main() {
     const URL_MUMBAI = config.mumbai.url + process.env.INFURA_KEY;
     await deploySource(URL_MUMBAI);
     
-    console.log("2. deploy mentle chain");
-    const URL_MENTLE = config.mnt.url;
-    await deployTarget(URL_MENTLE);
+    console.log("2. deploy mantle chain");
+    const URL_MANTLE = config.mnt.url;
+    await deployTarget(URL_MANTLE);
 
     console.log("3. deploy scroll chain");
     const URL_SCROLL = config.scroll.url;
