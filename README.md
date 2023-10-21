@@ -1,6 +1,6 @@
 # BridgeMookup
 
-The BridgeMookup is a bridge contract that facilitates the token transfer between different blockchains. Here is the information of the deployed contracts on different blockchains:
+The `BridgeMookup` is a bridge contract that facilitates the token transfer between different blockchains. Here is the information of the deployed contracts on different blockchains:
 
 | Blockchain                     | BridgeMookup Address                       | USDC Address                               | ETH Address                                |
 |--------------------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|
