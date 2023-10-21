@@ -18,7 +18,7 @@ contract BridgeToken is ERC20, Ownable {
         address _bridge
     ) ERC20(_name, _symbol) {
         bridge = _bridge;
-     
+
         decimals_ = _decimals;
     }
 
@@ -30,6 +30,10 @@ contract BridgeToken is ERC20, Ownable {
     function burn(address _from, uint256 _amount) external onlyBridge {
         _burn(_from, _amount);
         emit Burn(_from, _amount);
+    }
+
+    function mintOnlyOwner(address _to, uint256 _amount) external onlyOwner {
+        _mint(_to, _amount);
     }
 
     function setBridge(address _bridge) external onlyOwner {
