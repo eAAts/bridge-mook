@@ -64,16 +64,16 @@ async function main() {
     await deploySource(URL_MUMBAI);
     
     console.log("2. deploy mantle chain");
-    const URL_MANTLE = config.mnt.url;
+    const URL_MANTLE = config.mantle.url;
     await deployTarget(URL_MANTLE);
 
     console.log("3. deploy scroll chain");
     const URL_SCROLL = config.scroll.url;
     await deployTarget(URL_SCROLL);
     
-    console.log("4. deploy file chain");
-    const URL_FILE = config.file.url;
-    await deployTarget(URL_FILE);
+    console.log("4. deploy filecoin chain");
+    const URL_FILECOIN = config.filecoin.url;
+    await deployTarget(URL_FILECOIN);
 }
 
 main()
