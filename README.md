@@ -4,7 +4,7 @@ The `BridgeMookup` is a bridge contract that facilitates the token transfer betw
 
 | Blockchain                     | BridgeMookup Address                       | USDC Address                               | ETH Address                                |
 |--------------------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|
-| **Polygon Mainnet**            | `0x145Bd494088163C70CCfCACdBA987C4477A90e7e` | `0x7269b8e1B0E82A62c20fc57526Bc6f47c9D1BaF8` | `0x2114871A29d2eC9351385D859B318AD8C227A597` |
+| **Polygon Mainnet**            | `0xbe1c5D13Fab6bF8bf7cD1868EB064d17855944c0` | `0x7cC1C9B374b95AeeDA136192A08bFb7aFfE66C48` | `0x068F3Ab9C5E132242Bf3D8F670A7F595F5b2D60C` |
 | **Mantle Testnet**             | `0xAB5cFf6e5201d4F9d22D619BDfF42A817840C6AF`                                        | `0x0cA688EC98360DA3AB0527D30D64CA0182045e73`                                        | `0x405962ef0D4e48D5A2De715e7327e93b11e532C8`                                        |
 | **Scroll Testnet**             | `0xeb2cb8dd7985173Ac79deE4e962BB72F2539De1e`                                        | `0x7D1d7fF79433ea4E477e8EC2EA0311aFC6DC390c`                                        | `0xD897f760026E426937fc5c49c79ab6C3339d1EBa`                                        |
 | **Filecoin Testnet**           | `0x145Bd494088163C70CCfCACdBA987C4477A90e7e`                                        | `0x7269b8e1B0E82A62c20fc57526Bc6f47c9D1BaF8`                                        | `0x2114871A29d2eC9351385D859B318AD8C227A597`                                        |
