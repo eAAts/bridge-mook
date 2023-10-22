@@ -1,6 +1,6 @@
 {
-    "BridgeMookup": "0xeb2cb8dd7985173Ac79deE4e962BB72F2539De1e",
-    "USDC": "0x7D1d7fF79433ea4E477e8EC2EA0311aFC6DC390c",
-    "ETH": "0xD897f760026E426937fc5c49c79ab6C3339d1EBa",
+    "BridgeMookup": "0xf9171307eF7b7ec47832e6B984Af7c7Ac0E438b9",
+    "USDC": "0xB34715F7229C77c8c8aA841cf728190D5eb11961",
+    "ETH": "0xB3e8869FC52500D200A7979D31a37c1a4c5c01F3",
     "url": "https://scroll-sepolia.blockpi.network/v1/rpc/public"
 }
